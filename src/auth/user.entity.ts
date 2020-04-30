@@ -24,8 +24,12 @@ export class User extends BaseEntity {
   @Column()
   salt: string;
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  @OneToMany(type => Task, task => task.user, { eager: true })
+  @OneToMany(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    type => Task,
+    task => task.user,
+    { eager: true },
+  )
   tasks: Task[];
 
   async validatePassword(password: string): Promise<boolean> {
