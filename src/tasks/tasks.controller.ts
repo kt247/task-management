@@ -20,7 +20,7 @@ import { TaskStatusValidationPipe } from './pipes/task-status-validation.pipe';
 import { Task } from './task.entity';
 import { TaskStatus } from './task-status.enum';
 import { AuthGuard } from '@nestjs/passport';
-import { GetUser } from 'src/auth/get-user-decorator';
+import { GetUser } from '../auth/get-user-decorator';
 import { User } from '../auth/user.entity';
 
 @Controller('tasks')
